@@ -139,11 +139,13 @@
 	if (new_top_atom && new_top_atom != top_atom)
 		if(top_atom != source_atom && top_atom.light_sources) // Remove ourselves from the light sources of that top atom.
 			remove_from_light_sources(top_atom)
+			top_atom.update_bloom()
 
 		top_atom = new_top_atom
 
 		if (top_atom != source_atom)
 			add_to_light_sources(top_atom)
+			top_atom.update_bloom() // SS220 Bloom-Lights
 
 	EFFECT_UPDATE(LIGHTING_CHECK_UPDATE)
 

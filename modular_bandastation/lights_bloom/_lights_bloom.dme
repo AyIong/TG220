@@ -1,0 +1,7 @@
+#include "_lights_bloom.dm"
+
+#include "code/_color_matrix.dm"
+#include "code/_renderer.dm"
+#include "code/lighting_atom.dm"
+#include "code/lighting.dm"
+#include "code/preferences.dm"
