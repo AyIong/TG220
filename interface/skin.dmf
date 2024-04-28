@@ -11,47 +11,47 @@ macro "default"
 
 menu "menu"
 	elem
-		name = "&File"
+		name = "&Файл"
 		command = ""
 		saved-params = "is-checked"
 	elem
-		name = "&Quick screenshot\tF2"
+		name = "&Быстрый скриншот\tF2"
 		command = ".screenshot auto"
-		category = "&File"
+		category = "&Файл"
 		saved-params = "is-checked"
 	elem
-		name = "&Save screenshot as...\tShift+F2"
+		name = "&Сохранить скриншот как...\tShift+F2"
 		command = ".screenshot"
-		category = "&File"
+		category = "&Файл"
 		saved-params = "is-checked"
 	elem
 		name = ""
 		command = ""
-		category = "&File"
+		category = "&Файл"
 		saved-params = "is-checked"
 	elem "reconnectbutton"
-		name = "&Reconnect"
+		name = "&Переподключиться"
 		command = ".reconnect"
-		category = "&File"
+		category = "&Файл"
 		saved-params = "is-checked"
 	elem
-		name = "&Quit\tAlt-F4"
+		name = "&Выход\tAlt-F4"
 		command = ".quit"
-		category = "&File"
+		category = "&Файл"
 		saved-params = "is-checked"
 	elem "help-menu"
-		name = "&Help"
+		name = "&Помощь"
 		command = ""
 		saved-params = "is-checked"
 	elem
 		name = "&Admin Help\tF1"
 		command = "adminhelp"
-		category = "&Help"
+		category = "&Помощь"
 		saved-params = "is-checked"
 	elem
-		name = "&Hotkeys"
+		name = "&Хоткеи"
 		command = "Hotkeys-Help"
-		category = "&Help"
+		category = "&Помощь"
 		saved-params = "is-checked"
 
 
@@ -65,7 +65,7 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
-		icon = 'icons\\ui_icons\\common\\tg_32.png'
+		icon = 'icons\\ui_icons\\common\\ss220.png'
 		macro = "default"
 		menu = "menu"
 	elem "split"
@@ -148,60 +148,82 @@ window "infowindow"
 		left = "statwindow"
 		right = "outputwindow"
 		is-vert = false
-	elem "changelog"
-		type = BUTTON
-		pos = 16,5
-		size = 104x20
-		anchor1 = 3,0
-		anchor2 = 19,0
-		saved-params = "is-checked"
-		text = "Changelog"
-		command = "changelog"
-	elem "rules"
-		type = BUTTON
-		pos = 120,5
-		size = 100x20
-		anchor1 = 19,0
-		anchor2 = 34,0
-		saved-params = "is-checked"
-		text = "Rules"
-		command = "rules"
 	elem "wiki"
 		type = BUTTON
-		pos = 220,5
-		size = 100x20
-		anchor1 = 34,0
-		anchor2 = 50,0
-		saved-params = "is-checked"
-		text = "Wiki"
+		pos = 0,6
+		size = 75x17
+		anchor1 = 0,0
+		anchor2 = 14,0
+		text = "Вики"
 		command = "wiki"
-	elem "forum"
+	elem "rules"
 		type = BUTTON
-		pos = 320,5
-		size = 100x20
-		anchor1 = 50,0
-		anchor2 = 66,0
-		saved-params = "is-checked"
-		text = "Forum"
-		command = "forum"
+		pos = 80,6
+		size = 75x17
+		anchor1 = 14,0
+		anchor2 = 28,0
+		text = "Правила"
+		command = "rules"
+	elem "webmap"
+		type = BUTTON
+		pos = 160,6
+		size = 75x17
+		anchor1 = 28,0
+		anchor2 = 40,0
+		text = "Карта"
+		command = "webmap"
 	elem "github"
 		type = BUTTON
-		pos = 420,5
-		size = 100x20
-		anchor1 = 66,0
-		anchor2 = 81,0
-		saved-params = "is-checked"
-		text = "Github"
+		pos = 240,6
+		size = 75x17
+		anchor1 = 40,0
+		anchor2 = 52,0
+		text = "GitHub"
 		command = "github"
-	elem "report-issue"
+	elem "discord"
 		type = BUTTON
-		pos = 520,5
-		size = 100x20
-		anchor1 = 81,0
-		anchor2 = 97,0
+		pos = 320,6
+		size = 75x17
+		anchor1 = 52,0
+		anchor2 = 64,0
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #7289da
+		text = "Discord"
+		command = "discord"
+	elem "donate"
+		type = BUTTON
+		pos = 400,6
+		size = 75x17
+		anchor1 = 64,0
+		anchor2 = 76,0
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #ef642b
+		text = "Boosty"
+		command = "Donate"
+	elem "changelog"
+		type = BUTTON
+		pos = 480,6
+		size = 75x17
+		anchor1 = 76,0
+		anchor2 = 88,0
+		font-style = "bold"
+		text-color = #ffffff
+		text = "Changelog"
+		command = "Changelog"
+	elem "fullscreen"
+		type = BUTTON
+		pos = 560,6
+		size = 75x17
+		anchor1 = 88,0
+		anchor2 = 100,0
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #40628A
 		saved-params = "is-checked"
-		text = "Report Issue"
-		command = "report-issue"
+		text = "Fullscreen"
+		command = "fullscreen"
 
 window "outputwindow"
 	elem "outputwindow"

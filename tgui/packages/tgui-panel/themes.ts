@@ -6,9 +6,10 @@
 
 export const THEMES = ['light', 'dark'];
 
-const COLOR_DARK_BG = '#202020';
-const COLOR_DARK_BG_DARKER = '#171717';
-const COLOR_DARK_TEXT = '#a4bad6';
+const COLOR_DARK_BG = '#212020';
+const COLOR_DARK_BG_DARKER = '#131313';
+const COLOR_DARK_BG_BUTTON = '#4C4C4D';
+const COLOR_DARK_TEXT = '#A4BAD6';
 
 let setClientThemeTimer: NodeJS.Timeout;
 
@@ -97,18 +98,18 @@ export const setClientTheme = (name) => {
       'mainwindow.background-color': COLOR_DARK_BG,
       'split.background-color': COLOR_DARK_BG,
       // Buttons
-      'changelog.background-color': '#494949',
-      'changelog.text-color': COLOR_DARK_TEXT,
-      'rules.background-color': '#494949',
-      'rules.text-color': COLOR_DARK_TEXT,
-      'wiki.background-color': '#494949',
+      'wiki.background-color': COLOR_DARK_BG_BUTTON,
       'wiki.text-color': COLOR_DARK_TEXT,
-      'forum.background-color': '#494949',
+      'forum.background-color': COLOR_DARK_BG_BUTTON,
       'forum.text-color': COLOR_DARK_TEXT,
-      'github.background-color': '#3a3a3a',
+      'rules.background-color': COLOR_DARK_BG_BUTTON,
+      'rules.text-color': COLOR_DARK_TEXT,
+      'github.background-color': COLOR_DARK_BG_BUTTON,
       'github.text-color': COLOR_DARK_TEXT,
-      'report-issue.background-color': '#492020',
-      'report-issue.text-color': COLOR_DARK_TEXT,
+      'webmap.background-color': COLOR_DARK_BG_BUTTON,
+      'webmap.text-color': COLOR_DARK_TEXT,
+      'changelog.background-color': COLOR_DARK_BG_BUTTON,
+      'changelog.text-color': COLOR_DARK_TEXT,
       // Status and verb tabs
       'output.background-color': COLOR_DARK_BG_DARKER,
       'output.text-color': COLOR_DARK_TEXT,
