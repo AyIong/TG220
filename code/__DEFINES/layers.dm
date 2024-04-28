@@ -39,7 +39,8 @@
 
 //---------- LIGHTING -------------
 ///Normal 1 per turf dynamic lighting underlays
-#define LIGHTING_PLANE 10
+#define LIGHTING_PLANE 9
+#define LIGHTING_PLANE_ADDITIVE 10
 
 ///Lighting objects that are "free floating"
 #define O_LIGHTING_VISUAL_PLANE 11
@@ -313,3 +314,8 @@
 /// Increment this define if you make a huge map. We unit test for it too just to make it easy for you
 /// If you modify this, you'll need to modify the tsx file too
 #define MAX_EXPECTED_Z_DEPTH 3
+
+#define LIGHTING_PLANE_ALPHA_VISIBLE 255
+#define ADDITIVE_LIGHTING_PLANE_ALPHA_MAX 255
+#define ADDITIVE_LIGHTING_PLANE_ALPHA_NORMAL 128
+#define ADDITIVE_LIGHTING_PLANE_ALPHA_INVISIBLE 0

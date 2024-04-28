@@ -83,7 +83,8 @@ INITIALIZE_IMMEDIATE(/atom/movable/plane_master_controller)
 /atom/movable/plane_master_controller/game
 	name = PLANE_MASTERS_GAME
 	controlled_planes = list(
-		RENDER_PLANE_GAME
+		RENDER_PLANE_GAME,
+		LIGHTING_PLANE_ADDITIVE,
 	)
 
 /// Exists for convienience when referencing all non-master render plates.

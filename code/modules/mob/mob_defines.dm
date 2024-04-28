@@ -41,6 +41,7 @@
 	// Individual color max for blue, we can use this to color darkness without tinting the light
 	var/lighting_cutoff_blue = 0
 	/// A list of red, green and blue cutoffs
+	var/lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	/// This is what actually gets applied to the mob, it's modified by things like glasses
 	var/list/lighting_color_cutoffs = null
 	var/datum/mind/mind
