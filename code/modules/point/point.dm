@@ -22,7 +22,7 @@
 	var/turf/our_tile = get_turf(src)
 	var/obj/visual = new /obj/effect/temp_visual/point(our_tile, invisibility)
 
-	animate(visual, pixel_x = (tile.x - our_tile.x) * world.icon_size + pointed_atom.pixel_x, pixel_y = (tile.y - our_tile.y) * world.icon_size + pointed_atom.pixel_y, time = 1.7, easing = EASE_OUT)
+	animate(visual, pixel_x = (tile.x - our_tile.x) * world.icon_size + pointed_atom.pixel_x, pixel_y = (tile.y - our_tile.y) * world.icon_size + pointed_atom.pixel_y, time = 3.5, easing = EASE_OUT)
 
 /atom/movable/proc/create_point_bubble(atom/pointed_atom)
 	var/mutable_appearance/thought_bubble = mutable_appearance(
@@ -98,9 +98,13 @@
 	set name = "Point To"
 	set category = "Object"
 
+	if(next_move >= world.time)
+		return
+
 	if(istype(A, /obj/effect/temp_visual/point))
 		return FALSE
 
+	changeNext_move(1 SECONDS)
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(_pointed), A))
 
 /// possibly delayed verb that finishes the pointing process starting in [/mob/verb/pointed()].
