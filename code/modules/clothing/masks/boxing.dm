@@ -24,6 +24,10 @@
 	w_class = WEIGHT_CLASS_SMALL
 	actions_types = list(/datum/action/item_action/adjust)
 
+/obj/item/clothing/mask/floortilebalaclava/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/adjust_fishing_difficulty, -5) //tacticool
+
 /obj/item/clothing/mask/floortilebalaclava/attack_self(mob/user)
 	adjust_visor(user)
 
@@ -35,7 +39,7 @@
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/clothing/head/frenchberet/Initialize(mapload)
+/obj/item/clothing/mask/luchador/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/speechmod, replacements = strings("luchador_replacement.json", "luchador"), end_string = " OLE!", end_string_chance = 25, uppercase = TRUE, slots = ITEM_SLOT_MASK)
 
